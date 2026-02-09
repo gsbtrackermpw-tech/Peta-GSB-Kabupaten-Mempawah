@@ -436,6 +436,14 @@ td video {
 .ol-search-layer {
     top: 90px !important; /* Geser sedikit ke bawah agar tidak menumpuk */
     left: 10px !important;
+	/* Perbesar kotak pencarian agar mudah diklik jari */
+.ol-search-layer ul {
+    z-index: 10000 !important;
+    background: white !important;
+    color: black !important;
+    max-height: 200px;
+    overflow-y: auto;
+    display: block !important; /* Memaksa tampil jika script ragu */
 }
 
 .ol-search-layer input {
@@ -444,3 +452,4 @@ td video {
     width: 200px !important;
 }
 }
+
