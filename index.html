@@ -74,11 +74,26 @@
         minLength: 1                      // Ketik 1 huruf langsung muncul pilihan
     });
     map.addControl(searchLayer);
+ // Tambahan agar daftar pilihan dipaksa muncul di mobile
+var searchInput = document.querySelector('.ol-search-layer input');
+searchInput.addEventListener('input', function() {
+    var list = document.querySelector('.ol-search-layer ul');
+    if (list) {
+        list.style.display = 'block';
+        list.style.zIndex = '10000';
+    }
+});
+
+// Fokus saat sentuh
+searchInput.addEventListener('touchstart', function() {
+    this.focus();
+});
 document.querySelector('.ol-search-layer input').addEventListener('touchstart', function() {
     this.focus();
 });
 </script>
     </body>
 </html>
+
 
 
