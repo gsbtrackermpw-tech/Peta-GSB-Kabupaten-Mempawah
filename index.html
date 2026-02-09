@@ -74,7 +74,11 @@
         minLength: 1                      // Ketik 1 huruf langsung muncul pilihan
     });
     map.addControl(searchLayer);
+document.querySelector('.ol-search-layer input').addEventListener('touchstart', function() {
+    this.focus();
+});
 </script>
     </body>
 </html>
+
 
