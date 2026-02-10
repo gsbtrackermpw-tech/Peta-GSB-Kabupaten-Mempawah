@@ -113,8 +113,30 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 </script>
+        <script>
+(function() {
+    var searchInput = document.querySelector('.search-layer-input-search');
+    if (searchInput) {
+        // Memicu pencarian setiap kali ada perubahan teks (cocok untuk HP)
+        searchInput.addEventListener('input', function() {
+            var event = document.createEvent('HTMLEvents');
+            event.initEvent('keyup', true, false);
+            this.dispatchEvent(event);
+        });
+
+        // Mencegah keyboard HP menutupi hasil saat input fokus
+        searchInput.addEventListener('focus', function() {
+            setTimeout(function() {
+                window.scrollTo(0, 0);
+                document.body.scrollTop = 0;
+            }, 300);
+        });
+    }
+})();
+</script>
     </body>
 </html>
+
 
 
 
