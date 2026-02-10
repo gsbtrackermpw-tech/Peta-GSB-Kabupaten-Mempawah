@@ -420,8 +420,13 @@ td video {
 	padding-left: 8px !important;
 	list-style: none;	
 	}
-
+.ol-control {
+    transform: scale(1.5) !important;
+    transform-origin: top left;
+    margin: 15px !important;
+}
 .fa-exclamation-triangle {
     color: orangered;
 	font-size: 15px;
+
 }
