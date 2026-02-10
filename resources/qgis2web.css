@@ -433,6 +433,49 @@ td video {
 .ol-search-layer:focus .search-content {
     display: block !important;
     visibility: visible !important;
+
+	/* 1. Memperbesar tombol kontrol OpenLayers secara benar */
+.ol-control button {
+    transform: scale(1.4) !important;
+    margin: 2px !important;
 }
+
+/* 2. Memperbaiki posisi kontainer pencarian agar tidak terpotong */
+.ol-search-layer {
+    z-index: 1000 !important;
+    transform: scale(1.2);
+    transform-origin: left top;
 }
+
+/* 3. MEMAKSA DROPDOWN MUNCUL: Ini bagian terpenting untuk HP */
+.ol-search-layer .search-content {
+    display: block !important; /* Memaksa area hasil pencarian tetap aktif */
+    background-color: white !important;
+    max-height: 200px !important; /* Batasi tinggi agar tidak menutupi seluruh layar HP */
+    overflow-y: auto !important;
+    z-index: 1001 !important;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+/* 4. Menyesuaikan lebar kotak pencarian agar muat di layar HP */
+.ol-search-layer input {
+    width: 150px !important; /* Mengecilkan sedikit lebar kotak agar tidak 'off-screen' */
+	/* Tambahan agar hasil pencarian terlihat jelas di mobile */
+.ol-search-layer ul {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    background: white;
+    padding: 0;
+    margin-top: 5px;
+}
+
+.ol-search-layer li {
+    padding: 10px; /* Lebih besar agar mudah ditekan jari */
+    border-bottom: 1px solid #ddd;
+    list-style: none;
+    color: black;
+	
+}
+
 
