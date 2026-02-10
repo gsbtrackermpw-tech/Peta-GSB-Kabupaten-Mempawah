@@ -472,9 +472,26 @@ td video {
     border-bottom: 1px solid #eee !important;
     cursor: pointer !important;
     display: block !important;
+
+	/* Pastikan kontainer utama kontrol tidak memiliki 'overflow: hidden' */
+.ol-viewport {
+    overflow: visible !important;
 }
+
+/* Paksa area hasil pencarian muncul di atas segalanya */
+.ol-search-layer .search-content {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    position: fixed !important; /* Gunakan fixed agar tidak terpengaruh kontainer induk */
+    top: 60px !important; /* Sesuaikan dengan posisi tombol search Anda */
+    left: 50px !important;
+    width: 200px !important;
+    background: white !important;
+    z-index: 99999 !important;
 	
 }
+
 
 
 
