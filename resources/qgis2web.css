@@ -438,30 +438,36 @@ td video {
 .ol-control button {
     transform: scale(1.4) !important;
 }
+/* --- Hapus kode lama dari baris 443 ke bawah, lalu tempel ini --- */
 
-/* Memaksa kontainer pencarian dan hasilnya berada di depan */
 .ol-search-layer {
-    z-index: 9999 !important; 
-    position: absolute !important;
+    z-index: 9999 !important;
 }
 
-/* Memaksa dropdown hasil muncul tepat di bawah kotak pencarian */
 .ol-search-layer .search-content {
-    display: block !important; 
+    display: block !important;
     visibility: visible !important;
-    background-color: #ffffff !important;
-    color: #000000 !important;
-    position: relative !important;
-    z-index: 10000 !important;
+    position: fixed !important; /* Teknik ini mencabut dropdown dari peta agar tidak terpotong keyboard */
+    top: 100px !important;      /* Muncul agak ke tengah supaya tidak tertutup tangan saat ngetik */
+    left: 10px !important;
+    right: 10px !important;
+    width: auto !important;
     max-height: 250px !important;
+    background-color: white !important;
+    z-index: 10000 !important;
+    border: 2px solid #444 !important;
+    box-shadow: 0px 10px 25px rgba(0,0,0,0.5) !important;
     overflow-y: auto !important;
-    width: 100% !important;
-    border: 1px solid #ccc !important;
-    box-shadow: 0px 4px 10px rgba(0,0,0,0.5) !important;
 }
 
-/* Memastikan item di dalam list bisa diklik di HP */
-.ol-search-layer ul {
+.ol-search-layer ul li {
+    color: #000 !important;
+    background: #fff !important;
+    padding: 15px !important;   /* Ukuran pas untuk jempol di HP */
+    border-bottom: 1px solid #eee !important;
+    display: block !important;
+    font-size: 16px !important;
+}
     margin: 0 !important;
     padding: 0 !important;
     list-style: none !important;
@@ -491,6 +497,7 @@ td video {
     z-index: 99999 !important;
 	
 }
+
 
 
 
