@@ -9,7 +9,7 @@ var map = new ol.Map({
 });
 
 //initial view - epsg:3857 coordinates if not "Match project CRS"
-map.getView().fit([12122650.707834, 33221.732579, 12148020.603910, 46382.366169], map.getSize());
+map.getView().fit([12126069.697735, 36581.261786, 12138754.645773, 43161.578581], map.getSize());
 
 //full zooms only
 map.getView().setProperties({constrainResolution: true});
@@ -871,7 +871,7 @@ let measuring = false;
 //layer search
 
 var searchLayer = new SearchLayer({
-    layer: lyr_Jalan_Kabupaten_Join_2,
+    layer: lyr_JalanKabupaten_2,
     colName: 'Nama_Jalan',
     zoom: 10,
     collapsed: true,

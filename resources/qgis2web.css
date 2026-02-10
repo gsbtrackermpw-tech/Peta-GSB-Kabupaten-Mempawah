@@ -424,45 +424,4 @@ td video {
 .fa-exclamation-triangle {
     color: orangered;
 	font-size: 15px;
-
-	/* Perbesar semua tombol kontrol (Zoom, Search, Measure) */
-.ol-control button {
-    height: 40px !important;
-    width: 40px !important;
-    font-size: 20px !important;
 }
-
-/* Perbesar kotak pencarian agar mudah diklik jari */
-.ol-search-layer {
-    top: 90px !important; /* Geser sedikit ke bawah agar tidak menumpuk */
-    left: 10px !important;
-	/* Perbesar kotak pencarian agar mudah diklik jari */
-.ol-search-layer ul {
-    /* Ganti bagian .ol-search-layer ul Anda dengan ini */
-.ol-search-layer ul {
-    z-index: 10000 !important; /* Memastikan daftar di atas peta satelit */
-    background-color: #ffffff !important;
-    color: #000000 !important;
-    max-height: 250px !important;
-    overflow-y: auto !important;
-    display: block !important;
-    padding: 0 !important;
-    list-style: none !important;
-    border: 2px solid #3388ff !important;
-}
-
-.ol-search-layer li {
-    padding: 12px 15px !important; /* Lebih besar agar mudah ditekan jari */
-    border-bottom: 1px solid #eee !important;
-    cursor: pointer !important;
-}
-}
-
-.ol-search-layer input {
-    height: 35px !important;
-    font-size: 16px !important; /* Mencegah auto-zoom di iPhone */
-    width: 200px !important;
-}
-}
-
-

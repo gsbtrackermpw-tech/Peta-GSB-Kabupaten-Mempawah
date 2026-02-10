@@ -26,7 +26,7 @@ var style_JalanKabupaten_2 = function(feature, resolution){
                               labelFill, placement, bufferColor,
                               bufferWidth)
     }),new ol.style.Style({
-        stroke: new ol.style.Stroke({color: 'rgba(69,199,255,1.0)', lineDash: null, lineCap: 'square', lineJoin: 'bevel', width: 4.028}),
+        stroke: new ol.style.Stroke({color: 'rgba(29,180,255,1.0)', lineDash: null, lineCap: 'square', lineJoin: 'bevel', width: 4.028}),
         text: createTextStyle(feature, resolution, labelText, labelFont,
                               labelFill, placement, bufferColor,
                               bufferWidth)
