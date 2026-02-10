@@ -975,4 +975,17 @@ document.addEventListener('DOMContentLoaded', function() {
     var attributionControl = document.getElementsByClassName('bottom-attribution')[0];
     if (attributionControl) {
         bottomRightContainerDiv.appendChild(attributionControl);
+
+		// Paksa trigger pencarian untuk perangkat mobile
+document.addEventListener('DOMContentLoaded', function() {
+    var searchInput = document.querySelector('.ol-search-layer input');
+    if (searchInput) {
+        searchInput.addEventListener('input', function() {
+            // Memicu event keyup secara manual agar script pencarian jalan
+            var event = new Event('keyup');
+            this.dispatchEvent(event);
+        });
+    }
+});
+
     }
