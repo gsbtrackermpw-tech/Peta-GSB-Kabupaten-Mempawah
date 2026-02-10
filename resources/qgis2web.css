@@ -429,4 +429,10 @@ td video {
     color: orangered;
 	font-size: 15px;
 
+.ol-search-layer.active .search-content,
+.ol-search-layer:focus .search-content {
+    display: block !important;
+    visibility: visible !important;
 }
+}
+
